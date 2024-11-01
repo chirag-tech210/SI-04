@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="resume-container">
+        <header>
+            <h1>CHIRAG YADAV</h1>
+            <p>Web Developer | Enginnering Student</p>
+            <a href="chirag CV1.pdf" download class="download-button">Download Resume</a>
+       
+        </header>
+
+        <section class="about-section">
+            <h2>About Me</h2>
+            <p>Hello! I am a btech 3rd year student. i am currently doing web development as my hobby . </p>
+        </section>
+
+        <section class="skills-section" id="skills">
+            <h2>Skills</h2>
+            <canvas id="skillsChart"></canvas>
+        </section>
+
+        <section class="experience-section">
+            <h2>Experience</h2>
+            <button onclick="toggleSection('experience')">Show Experience</button>
+            <div id="experience" class="collapsible">
+                <h3>Web Developer at Kaleidonex Technologies LLP.</h3>
+                <p>Developed dynamic websites and web applications...</p>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <h2>Projects</h2>
+            <div class="project" onclick="showProjectDetails('project1')">
+                <h3> Front end E-commerse website </h3>
+                <p>This website consists of  shoes buying page with thumbnails and review option and comments section . and also provides related content.</p>
+            </div>
+            <div id="project1" class="project-details">
+                <video controls>
+                    <source src="project-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
